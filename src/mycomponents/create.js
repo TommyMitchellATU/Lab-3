@@ -1,8 +1,9 @@
-
+//Componet inside app
+//Create
 function Create() {
     return (
         <div>
-            <h3>Hello from create</h3>
+            <h3>Hello from create component</h3>
         </div>
     )
 }
