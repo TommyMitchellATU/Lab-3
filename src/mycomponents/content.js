@@ -1,5 +1,5 @@
 // Main content home Page
-//Footer
+//Content
 function Content() {
     return (
         <div>
@@ -8,6 +8,5 @@ function Content() {
         </div>
     )
 }
-
 
 export default Content;

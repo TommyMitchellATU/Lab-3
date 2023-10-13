@@ -1,5 +1,5 @@
 //Componet inside app
-//Footer
+//Header
 function Header() {
     return (
         <div>
