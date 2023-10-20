@@ -4,14 +4,24 @@ import { useState } from "react";
 //Create
 function Create() {
 
-    const [ title, setTitle ] = useState('')
-    const [author, setAuthor ] = userState('')
-    const [frontPage, setFrontPage ] = userState('')
+    //constants
+    const [title, setTitle] = useState('')
+    const [author, setAuthor] = useState('')
+    const [cover, setCover] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log("Title " + title + "Cover: " + cover + "Author: " + author);
+    }
 
     return (
         <div>
+            
             <h3>Hello from create component</h3>
-            <form>
+            <form onSubmit={handleSubmit}>
+
+                {/* Adding book title */}
                 <div className="form-group">
                     <label>Add Book Title: </label>
                     <input type="text"
@@ -21,6 +31,7 @@ function Create() {
                     />
                 </div>
 
+                {/* Adding book Author */}
                 <div className="form-group">
                     <label>Add Book Author: </label>
                     <input type="text"
@@ -30,22 +41,23 @@ function Create() {
                     />
                 </div>
 
+                {/* Adding Front Page URL */}
                 <div className="form-group">
                     <label>Add Front Page URL: </label>
                     <input type="text"
                         className="form-control"
-                        value={frontPage}
-                        onChange={(e) => { setFrontPage(e.target.value) }}
+                        value={cover}
+                        onChange={(e) => { setCover(e.target.value) }}
                     />
                 </div>
 
-                <div className="form-group">
-                    <label>Add Book Title: </label>
-                    <input type="button"
-                        className="form-control"
-                        value={title}
-                        onChange={(e) => { setTitle(e.target.value) }}
-                    />
+                {/* Button for adding book */}
+                <div>
+                    <input type="submit"
+                        value="Add Book">
+
+                    </input>
+
                 </div>
 
             </form>
