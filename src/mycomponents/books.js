@@ -9,7 +9,7 @@ function Books(props) {
     return props.myBooks.map(
         // arrow function to pull bookitem
         (book)=>{
-            return <BookItem myBook = {book}></BookItem>
+            return <BookItem myBook = {book} key={book.lsbn}></BookItem>
         }
     );
     
